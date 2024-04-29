@@ -1,0 +1,16 @@
+type Product {
+    id: ID!
+    name: String!
+    price: Float!
+    image: ProductImage
+    createdAt: String!
+}
+
+type ProductImage {
+    id: ID!
+    url: String!
+}
+
+extend type Query {
+    products: [Product!]!
+}
